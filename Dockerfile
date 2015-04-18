@@ -8,7 +8,7 @@ RUN \
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 
 RUN curl http://packages.elasticsearch.org/GPG-KEY-elasticsearch | apt-key add -
-RUN echo "deb http://packages.elasticsearch.org/elasticsearch/1.4/debian stable main" >> /etc/apt/sources.list
+RUN echo "deb http://packages.elasticsearch.org/elasticsearch/1.5/debian stable main" >> /etc/apt/sources.list
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y elasticsearch && \
     rm -rf /var/lib/apt/lists/*
